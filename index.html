@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+</head>
+<body>
+    <div id="totalvaluewrapper">
+        <p id="totalvalue">Total:</p>
+    </div>
+
+    <div id="totalcountwrapper">
+        <p id="pennycounter" class="counter">Pennies:</p>
+        <p id="nickelcounter" class="counter">Nickels:</p>
+        <p id="dimecounter" class="counter">Dimes:</p>
+        <p id="quartercounter" class="counter">Quarters:</p>
+    </div>
+
+    <div id="coinchangewrapper">
+        <div>
+            <button onclick="incrementCoin('penny')" type="button">+1</button>
+            <input id="pennyinput" onchange="setNewCoinCount('penny')" type="number" min="0">
+            <button onclick="decrementCoin('penny')" type="button">-1</button>
+        </div>
+        <div>
+            <button onclick="incrementCoin('nickel')" type="button">+1</button>
+            <input id="nickelinput" onchange="setNewCoinCount('nickel')" type="number" min="0">
+            <button onclick="decrementCoin('nickel')" type="button">-1</button>
+        </div>
+        <div>
+            <button onclick="incrementCoin('dime')" type="button">+1</button>
+            <input id="dimeinput" onchange="setNewCoinCount('dime')" type="number" min="0">
+            <button onclick="decrementCoin('dime')" type="button">-1</button>
+        </div>
+        <div>
+            <button onclick="incrementCoin('quarter')" type="button">+1</button>
+            <input id="quarterinput" onchange="setNewCoinCount('quarter')" type="number" min="0">
+            <button onclick="decrementCoin('quarter')" type="button">-1</button>
+        </div>
+    </div>
+</body>
+</html>

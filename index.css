@@ -1,0 +1,36 @@
+#totalvaluewrapper p{
+    text-align: center;
+}
+
+#totalcountwrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#coinchangewrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#coinchangewrapper div{
+    display: flex;
+    flex-direction: column;
+}
+
+#coinchangewrapper input{
+    width: 50px;
+}
+
+/*Gets rid of the up and down arrows on the number inputs*/
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
