@@ -13,14 +13,23 @@ function display() {
     nickelCounterElement.innerHTML = "Nickels: " + nNickels;
     dimeCounterElement.innerHTML = "Dimes: " + nDimes;
     quarterCounterElement.innerHTML = "Quarters: " + nQuarters;
+    //set coin values
+    document.getElementById("pennyvalue").innerHTML = centToString(nPennies);
+    document.getElementById("nickelvalue").innerHTML = centToString(nNickels * 5);
+    document.getElementById("dimevalue").innerHTML = centToString(nDimes * 10);
+    document.getElementById("quartervalue").innerHTML = centToString(nQuarters * 25);
     let val = (nPennies * 1) + (nNickels * 5) + (nDimes * 10) + (nQuarters * 25);
-    let valStr = "$" + Math.floor(val/100) + ".";
-    valRight = (val%100).toString();
+    totalElement.innerHTML = "Total: " + centToString(val);
+}
+
+function centToString(cents) {
+    let valStr = "$" + Math.floor(cents/100) + ".";
+    let valRight = (cents%100).toString();
     if(valRight.length < 2) {
         valRight = "0" + valRight;
     }
     valStr += valRight;
-    totalElement.innerHTML = "Total: " + valStr;
+    return valStr;
 }
 
 function incrementCoin(coin) {
